@@ -13,13 +13,15 @@ class Admin_auth extends Controller
         $password= md5($req->pass);
 
         $res=User::where('email',$email)->where('password',$password)->get();
+        // dd(isset($res[0]));
         // echo "<pre>";
         // print_r($res[0]);
         if(isset($res[0])){
-            if($res[0]->is_active==1){
-                $req->session()->put('user_id',$res[0]->admin_id);
-                $fullname=$res[0]->first_name." ".$res[0]->last_name;
+            if($res[0]->status==1){
+                $req->session()->put('user_id',$res[0]->id);
+                $fullname=$res[0]->firstname." ".$res[0]->lastname;
                 $req->session()->put('user_name',$fullname);
+                // dd(session()->has('user_id'));
                 return redirect()->route('admin.dashboard');
             }
             else{

@@ -16,7 +16,8 @@ class CreateStudentDetailsTable extends Migration
         Schema::create('student_details', function (Blueprint $table) {
             $table->id();
             // $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('user_id');
+            $table->foreignId('user_id')->constrained()->references('id')->on('users')->onDelete('cascade'); 
+            // $table->integer('user_id');
             $table->string('firstname');
             $table->string('lastname');
             $table->string('phone_no');

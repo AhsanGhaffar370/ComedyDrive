@@ -158,7 +158,6 @@ Route::group(['middleware'=>['front_auth']],function(){
         // Directory
         Route::get('/directory/view/#{id}',[FrontDirectoryController::class, 'view_company'])->name('directory.view.user');
     });
-
 });
 
 

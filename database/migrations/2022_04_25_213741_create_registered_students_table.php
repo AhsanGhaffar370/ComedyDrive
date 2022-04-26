@@ -15,8 +15,10 @@ class CreateRegisteredStudentsTable extends Migration
     {
         Schema::create('registered_students', function (Blueprint $table) {
             $table->id();
-            $table->integer('student_id');
-            $table->integer('course_id');
+            // $table->integer('student_id');
+            // $table->integer('course_id');
+            $table->foreignId('student_id')->constrained()->references('id')->on('users')->onDelete('cascade'); 
+            $table->foreignId('course_id')->constrained()->references('id')->on('courses'); 
             // $table->foreign('student_id')->references('id')->on('users');
             // $table->foreign('course_id')->references('id')->on('courses');
             $table->date('date');

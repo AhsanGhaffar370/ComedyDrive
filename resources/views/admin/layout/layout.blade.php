@@ -15,8 +15,8 @@
       <script src="https://kit.fontawesome.com/7516c4b4cc.js" crossorigin="anonymous"></script>
 
       <!-- custom css -->
-      <link href="{{ asset('public/admin_asset/css/custom.min.css') }}" rel="stylesheet">
-      <link href="{{ asset('public/admin_asset/css/my_style.css') }}" rel="stylesheet">
+      <link href="{{ asset('admin_asset/css/custom.min.css') }}" rel="stylesheet">
+      <link href="{{ asset('admin_asset/css/my_style.css') }}" rel="stylesheet">
 
       <!-- datatables -->
       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
@@ -38,6 +38,7 @@
       </style>
    </head>
    <body class="nav-md">
+      {{asset('')}}
       <div class="container body">
          <div class="main_container">
             <div class="col-md-3 left_col">
@@ -125,9 +126,9 @@
 
       <!-- custom js -->
       
-      <script src="{{ asset('public/admin_asset/js/my_validation.js') }}"></script>
-      <script src="{{ asset('public/admin_asset/js/icheck.min.js') }}"></script>
-      <script src="{{ asset('public/admin_asset/js/custom.js') }}"></script>
+      <script src="{{ asset('admin_asset/js/my_validation.js') }}"></script>
+      <script src="{{ asset('admin_asset/js/icheck.min.js') }}"></script>
+      <script src="{{ asset('admin_asset/js/custom.js') }}"></script>
 
       
       <!-- datepicker -->
